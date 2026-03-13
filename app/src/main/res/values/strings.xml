@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UTS_PemrogSeluler_42430007_Gabriel</string>
+    <string name="logo_desc">Logo Aplikasi</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
+</resources>
