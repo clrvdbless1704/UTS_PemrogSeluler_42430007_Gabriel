@@ -1,5 +1,6 @@
-package com.example.utspemrogseluler
+package com.example.uts_pemrogseluler
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -12,25 +13,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val username = findViewById<EditText>(R.id.etUsername)
-        val password = findViewById<EditText>(R.id.etPassword)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val etNama = findViewById<EditText>(R.id.etNamaDosen)
+        val btnMasuk = findViewById<Button>(R.id.btnMasuk)
 
-        btnLogin.setOnClickListener {
+        btnMasuk.setOnClickListener {
 
-            val user = username.text.toString()
-            val pass = password.text.toString()
+            val nama = etNama.text.toString()
 
-            if(user == "admin" && pass == "123"){
+            if (nama.isNotEmpty()) {
 
-                Toast.makeText(this,"Login Berhasil",Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, dashboardActivity::class.java)
+                intent.putExtra("NAMA_DOSEN", nama)
 
-            }else{
+                startActivity(intent)
 
-                Toast.makeText(this,"Login Gagal",Toast.LENGTH_SHORT).show()
-
+            } else {
+                Toast.makeText(this,"Nama harus diisi",Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 }
