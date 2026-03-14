@@ -7,4 +7,9 @@
     <string name="portal_dosen">Portal Dosen</string>
     <string name="btn_masuk">MASUK</string>
     <string name="hint_nama_dosen">Masukan Nama Dosen</string>
+    <string name="jumlah_mahasiswa_hint">Jumlah Mahasiswa</string>
+    <string name="rata_nilai_hint">Rata-rata Nilai Kelas</string>
+    <string name="btn_proses">PROSES DATA</string>
+    <string name="panel_title">Panel Generator Lembar Penilaian</string>
+    <string name="welcome_dosen">Selamat bertugas, Dosen</string>
 </resources>
