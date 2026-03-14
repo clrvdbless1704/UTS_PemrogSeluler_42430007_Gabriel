@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
+        android:paddingTop="?attr/actionBarSize"
         android:gravity="center_horizontal">
 
         <ImageView
@@ -40,20 +41,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/jumlah_mahasiswa_hint"
-            android:autofillHints="none"
             android:inputType="number"
             android:layout_marginBottom="16dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"/>
 
         <EditText
             android:id="@+id/etRataNilai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/rata_nilai_hint"
-            android:autofillHints="none"
             android:inputType="number"
             android:layout_marginBottom="24dp"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"/>
 
         <Button
             android:id="@+id/btnProses"
@@ -61,7 +60,7 @@
             android:maxWidth="320dp"
             android:layout_height="wrap_content"
             android:text="@string/btn_proses"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"/>
 
         <TextView
             android:id="@+id/tvStatus"
@@ -69,6 +68,14 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- TEMPAT INPUT NAMA MAHASISWA -->
+        <LinearLayout
+            android:id="@+id/layoutMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_marginBottom="16dp"/>
 
         <TextView

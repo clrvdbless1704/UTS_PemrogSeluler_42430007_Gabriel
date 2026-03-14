@@ -1,10 +1,7 @@
 package com.example.uts_pemrogseluler
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class PanelActivity : AppCompatActivity() {
@@ -18,8 +15,7 @@ class PanelActivity : AppCompatActivity() {
         val etNilai = findViewById<EditText>(R.id.etRataNilai)
         val btnProses = findViewById<Button>(R.id.btnProses)
         val tvStatus = findViewById<TextView>(R.id.tvStatus)
-        val tvAbsen = findViewById<TextView>(R.id.tvAbsen)
-
+        val layoutMahasiswa = findViewById<LinearLayout>(R.id.layoutMahasiswa)
 
         val namaDosen = intent.getStringExtra("NAMA_DOSEN") ?: ""
 
@@ -35,7 +31,6 @@ class PanelActivity : AppCompatActivity() {
                 val jumlahMahasiswa = jumlahStr.toInt()
                 val rataNilai = nilaiStr.toInt()
 
-
                 val statusKelas = if (rataNilai >= 80) {
                     "Sangat Baik"
                 } else if (rataNilai >= 60) {
@@ -46,13 +41,18 @@ class PanelActivity : AppCompatActivity() {
 
                 tvStatus.text = getString(R.string.status_kelas, statusKelas)
 
+                // Hapus input sebelumnya
+                layoutMahasiswa.removeAllViews()
 
-                val builder = StringBuilder()
+                // Membuat input nama mahasiswa sesuai jumlah
                 for (i in 1..jumlahMahasiswa) {
-                    builder.append(getString(R.string.absen_item, i))
+                    val inputNama = EditText(this)
+                    // Note: Ideally, "Nama Mahasiswa" should also be a string resource
+                    inputNama.hint = "Nama Mahasiswa $i"
+                    inputNama.textSize = 16f
+                    inputNama.setPadding(20, 20, 20, 20)
+                    layoutMahasiswa.addView(inputNama)
                 }
-
-                tvAbsen.text = builder.toString()
 
             } else {
                 Toast.makeText(this, getString(R.string.error_empty_data), Toast.LENGTH_SHORT).show()
