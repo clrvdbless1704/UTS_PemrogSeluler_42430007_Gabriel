@@ -58,6 +58,7 @@
         <Button
             android:id="@+id/btnProses"
             android:layout_width="match_parent"
+            android:maxWidth="320dp"
             android:layout_height="wrap_content"
             android:text="@string/btn_proses"
             android:layout_marginBottom="24dp" />

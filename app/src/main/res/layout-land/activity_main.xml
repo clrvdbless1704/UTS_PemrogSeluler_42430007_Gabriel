@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="24dp"
+        android:gravity="center_horizontal"
         app:layout_constraintStart_toEndOf="@id/imgLogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imgLogo"
@@ -49,6 +50,7 @@
         <Button
             android:id="@+id/btnMasuk"
             android:layout_width="match_parent"
+            android:maxWidth="320dp"
             android:layout_height="wrap_content"
             android:text="@string/btn_masuk"
             android:textColor="#FFFFFF"

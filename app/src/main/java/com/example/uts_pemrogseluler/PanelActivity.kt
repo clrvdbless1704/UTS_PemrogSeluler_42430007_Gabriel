@@ -20,7 +20,7 @@ class PanelActivity : AppCompatActivity() {
         val tvStatus = findViewById<TextView>(R.id.tvStatus)
         val tvAbsen = findViewById<TextView>(R.id.tvAbsen)
 
-        // menerima data dari halaman login
+
         val namaDosen = intent.getStringExtra("NAMA_DOSEN") ?: ""
 
         tvSapaan.text = getString(R.string.welcome_dosen, namaDosen)
@@ -35,7 +35,7 @@ class PanelActivity : AppCompatActivity() {
                 val jumlahMahasiswa = jumlahStr.toInt()
                 val rataNilai = nilaiStr.toInt()
 
-                // LOGIKA IF ELSE STATUS KELAS
+
                 val statusKelas = if (rataNilai >= 80) {
                     "Sangat Baik"
                 } else if (rataNilai >= 60) {
@@ -46,7 +46,7 @@ class PanelActivity : AppCompatActivity() {
 
                 tvStatus.text = getString(R.string.status_kelas, statusKelas)
 
-                // LOGIKA FOR LOOP CETAK ABSEN
+
                 val builder = StringBuilder()
                 for (i in 1..jumlahMahasiswa) {
                     builder.append(getString(R.string.absen_item, i))

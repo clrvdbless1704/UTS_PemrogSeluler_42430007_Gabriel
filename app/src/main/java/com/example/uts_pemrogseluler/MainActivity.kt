@@ -13,22 +13,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val etNama = findViewById<EditText>(R.id.etNamaDosen)
+        val etNamaDosen = findViewById<EditText>(R.id.etNamaDosen)
         val btnMasuk = findViewById<Button>(R.id.btnMasuk)
 
         btnMasuk.setOnClickListener {
+            val namaDosen = etNamaDosen.text.toString()
 
-            val nama = etNama.text.toString()
-
-            if (nama.isNotEmpty()) {
-
-                val intent = Intent(this, dashboardActivity::class.java)
-                intent.putExtra("NAMA_DOSEN", nama)
-
+            if (namaDosen.isNotEmpty()) {
+                val intent = Intent(this, PanelActivity::class.java)
+                intent.putExtra("NAMA_DOSEN", namaDosen)
                 startActivity(intent)
-
             } else {
-                Toast.makeText(this,"Nama harus diisi",Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    getString(R.string.error_empty_data),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
     }
