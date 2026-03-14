@@ -11,5 +11,8 @@
     <string name="rata_nilai_hint">Rata-rata Nilai Kelas</string>
     <string name="btn_proses">PROSES DATA</string>
     <string name="panel_title">Panel Generator Lembar Penilaian</string>
-    <string name="welcome_dosen">Selamat bertugas, Dosen</string>
+    <string name="welcome_dosen">Selamat bertugas, Dosen %1$s</string>
+    <string name="status_kelas">Status Kelas: %1$s</string>
+    <string name="absen_item">Mahasiswa %1$d : __________\n</string>
+    <string name="error_empty_data">Mohon isi semua data!</string>
 </resources>
